@@ -1,0 +1,150 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 900px;
+}
+#imageHolder{
+    display: none;
+}
+.holder,.cells,#turnHolder{
+    width: 100px;
+    height: 100px;
+    /* border: 1px black solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+#cross{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: loop 1s ease-out;
+}
+#cross1{
+    width: 70px;
+    height: 7px;
+    background-image: linear-gradient(to right,plum,aqua,aqua,aqua,plum,plum);
+    border-radius: 50px;
+    position: absolute;
+    rotate: -45deg;
+}
+#cross2{
+    width: 70px;
+    height: 7px;
+    background-image: linear-gradient(to left,plum,aqua,aqua,aqua,plum,plum);
+    border-radius: 50px;
+    position: absolute;
+    rotate: 45deg;
+}
+
+#cir1{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image:conic-gradient(plum,aqua,aqua,aqua,plum,plum);
+    animation: loop 1s ease-out;
+}
+#cir2{
+    width: 55px;
+    height: 55px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+#cellContainer{
+    display: grid;
+    grid-template:
+     "one two three"
+     "four five six"
+     "seven eight nine";
+     gap: 5px;
+     background-image:conic-gradient(plum,aqua,plum,aqua,plum,aqua,plum,plum)
+}
+#cell1{
+    grid-area: one;
+}
+#cell2{
+    grid-area: two;
+}
+#cell3{
+    grid-area: three;
+}
+#cell4{
+    grid-area: four;
+}
+#cell5{
+    grid-area: five;
+}
+#cell6{
+    grid-area: six;
+}
+#cell7{
+    grid-area: seven;
+}
+#cell8{
+    grid-area: eight;
+}
+#cell9{
+    grid-area: nine;
+}
+
+.popUp{
+    position: absolute;
+    
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 100px;
+    border-radius: 20px;
+    background-color: aqua;
+    color: plum;
+    transition: all 2s linear;  
+    z-index: -1;
+    opacity: 0;
+}
+
+#button{
+    cursor: pointer;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: xx-large;
+    align-content: center;
+    background-color: plum;
+    transition: all .5s;
+}
+#button:hover{
+    background-color: aqua;
+}
+
+
+#gameHolder{
+    animation: loop 1s ease-in reverse;
+}
+
+@keyframes loop {
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
