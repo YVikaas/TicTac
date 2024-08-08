@@ -66,11 +66,11 @@ function checkWin(){
         else if(a=="circle"&&b=="circle"&&c=="circle"){
             return 2;
         }
-        else if(flagDraw==9){
+    }
+
+    if(flagDraw==9){
             return 9;
         }
-
-    }
     
     return 0;
 }
